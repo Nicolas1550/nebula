@@ -1,0 +1,32 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const read=p=>fs.readFileSync(path.join(root,p),'utf8');
+const exists=p=>assert.ok(fs.existsSync(path.join(root,p)),`No existe ${p}`);
+const newParts=['NovaAssistant','ProjectMuseum','PlanetLanding','RecruiterTour'];
+for(const name of newParts){
+  const file=`components/v10/${name}.tsx`;exists(file);
+  assert.ok(read('app/page.tsx').includes(name),`${name} no integrado en Home`);
+  console.log('✓',name,'integrado');
+}
+const data=read('data/portfolioProjects.ts');
+const ids=[...data.matchAll(/"id": "(p\d\d)"/g)].map(m=>m[1]);
+assert.equal(ids.length,14,'Se esperan 14 proyectos');assert.equal(new Set(ids).size,14,'ID duplicado');
+for(const id of ids)exists(`public/portfolio/thumbs/${id}.webp`);
+const museum=read('components/v10/ProjectMuseum.tsx');
+const nova=read('components/v10/NovaAssistant.tsx');
+assert.ok(museum.includes('portfolioProjects'),'El museo debe usar proyectos reales');
+assert.ok(nova.includes('portfolioProjects'),'NOVA debe consultar proyectos reales');
+assert.ok(museum.includes('useTexture'),'Falta el material de imagen en los paneles 3D');
+const home=read('app/page.tsx');
+assert.ok(home.includes('ProjectMuseum lowPower'),'El museo no aparece en ORIGIN');
+assert.ok(home.includes('PlanetLanding world'),'El aterrizaje no está conectado');
+assert.ok(home.includes('RECORRIDO RECLUTADOR'),'Falta botón recruiter');
+assert.ok(home.includes('NovaAssistant'),'Falta launcher NOVA');
+for(const name of ['ORIGIN','NEXUS','INFERNO'])assert.ok(home.includes(name));
+for(const name of ['public/social/nebula-v10-cover.jpg','public/portfolio/photo.webp'])exists(name);
+console.log('✓ Conservados 14 proyectos, imágenes y tres mundos');
+console.log('✓ Museo, NOVA, aterrizaje y recorrido conectados');
+console.log('Nota: verificación estructural; correr npm run build y probar WebGL en navegador.');
