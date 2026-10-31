@@ -6,7 +6,7 @@ import * as THREE from 'three';
 type Props={ compact?:boolean };
 const lightBlue='#87dfff';
 function StationGeometry(){
-  const beacon=useRef<THREE.Mesh>(null);
+  const beacon=useRef<THREE.Group>(null);
   const drone=useRef<THREE.Group>(null);
   useFrame(({clock},dt)=>{
     if(beacon.current){beacon.current.rotation.y+=Math.min(dt,.05)*.2;}

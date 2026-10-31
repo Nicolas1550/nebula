@@ -1,1 +1,19 @@
-node_modules
+# Dependencies
+node_modules/
+
+# Next.js build output
+.next/
+out/
+*.tsbuildinfo
+
+# Deployment
+.vercel/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Misc
+*.log
+.DS_Store
