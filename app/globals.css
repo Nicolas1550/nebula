@@ -264,3 +264,102 @@ a{color:inherit;text-decoration:none}button:focus-visible,a:focus-visible,input:
 @media(prefers-reduced-motion:reduce){.nova-orb,.landing-clouds,.tour-content{animation:none}.tour-entrance,.museum-arrow{transition:none}}
 
 @media (min-width:761px) and (max-width:1240px){.edition{display:none}.brand-light{display:none}.tour-entrance{margin-right:7px}}
+
+/* ============================================================================
+   NEBULA V11 · NEXUS RESEARCH LAB + INFERNO OPERATION EMBER
+   Canvas experiments, no extra WebGL context, responsive and keyboard-friendly.
+   ============================================================================ */
+.nexus-v11,.inferno-v11{--lab-line:#6d9bc73d;--lab-ink:#d5eafa;color:#d9edff}
+.nexus-v11 .section-head,.inferno-v11 .section-head{max-width:880px}
+.nexus-v11 .section-head h2 em{color:#bea0ff}
+.inferno-v11 .section-head h2 em{color:#ff986f}
+.nexus-mode-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:32px 0 18px}
+.nexus-mode-tabs button{position:relative;text-align:left;padding:20px 21px;min-height:96px;color:#a5b9d5;border:1px solid #5979ad50;background:linear-gradient(135deg,#101a31,#060e20);transition:background .2s,border-color .2s,transform .2s}
+.nexus-mode-tabs button:hover{border-color:#8bc4ffb7;transform:translateY(-2px)}
+.nexus-mode-tabs button.active{color:#f0eaff;border-color:#b18cfdb3;background:linear-gradient(128deg,#312656,#101b3b 72%,#0c152d);box-shadow:inset 0 2px 0 #aa89ff,0 0 25px #5e3bd326}
+.nexus-mode-tabs button span,.nexus-mode-tabs button strong{display:block}
+.nexus-mode-tabs button span{color:#839fc5;font-size:9px;letter-spacing:.2em;margin-bottom:11px}
+.nexus-mode-tabs button strong{font-size:12px;letter-spacing:.085em;font-weight:850}
+.nexus-console{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(270px,.9fr);min-height:440px;border:1px solid #698fc75e;background:#070f23;box-shadow:0 24px 70px #0008}
+.nexus-visual{position:relative;min-height:440px;overflow:hidden;background:#050c20;isolation:isolate}
+.nexus-visual:after{content:'';pointer-events:none;position:absolute;inset:0;background:linear-gradient(90deg,#08142b71,transparent 35%,transparent 65%,#08142b3d),radial-gradient(ellipse at center,transparent 54%,#02061285)}
+.nexus-visual canvas{display:block;width:100%;height:100%;min-height:440px;touch-action:none}
+.nexus-corner{position:absolute;z-index:2;pointer-events:none;color:#87a4c9;font-size:9px;font-weight:750;letter-spacing:.13em;text-shadow:0 0 7px #030a18}
+.nexus-topleft{top:20px;left:23px;display:flex;align-items:center;gap:9px}
+.nexus-topleft b{color:#bed7f0}
+.nexus-status-dot{width:6px;height:6px;border-radius:50%;background:#7bf3bb;box-shadow:0 0 14px #53fac1}
+.nexus-topright{top:22px;right:22px;text-align:right;color:var(--nexus-accent)}
+.nexus-topright span{display:block;margin-top:8px;color:#84a3c4}
+.nexus-bottomleft{bottom:21px;left:23px}
+.nexus-bottomleft span{display:block;margin-top:8px;color:#9ebcdd}
+.nexus-controls{padding:27px 28px 22px;border-left:1px solid #618ac54a;background:linear-gradient(153deg,#101d37,#0b152b 48%,#0c1428)}
+.nexus-control-title{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:10px;color:#8eb3dd;font-weight:800;letter-spacing:.14em}
+.nexus-control-title span{color:#6ff1bc}
+.nexus-controls h3{font-size:26px;line-height:1.15;letter-spacing:-.03em;margin:25px 0 9px;color:#f4f7ff}
+.nexus-controls>p{font-size:12px;color:#98b3d0;line-height:1.7;min-height:50px}
+.nexus-metric{padding:15px 17px;margin:25px 0 18px;background:#172744a0;border:1px solid #7a9ec44b;display:grid;grid-template-columns:1fr auto;gap:13px}
+.nexus-metric small{font-size:9px;color:#a5bcdb;letter-spacing:.09em}
+.nexus-metric>b{font-size:12px;color:#ccbdff}
+.nexus-meter{grid-column:1/-1;height:4px;background:#294161}
+.nexus-meter span{display:block;height:100%;background:linear-gradient(90deg,#6ad7ff,#b98aff);box-shadow:0 0 12px #a58dff}
+.nexus-controls label{display:block;position:relative;margin:18px 0;font-size:10px;letter-spacing:.09em;color:#b4cce8;font-weight:750}
+.nexus-controls label b{float:right;color:#c2aeff}
+.nexus-controls input{display:block;width:100%;margin-top:14px;accent-color:#ab94ff;cursor:pointer;height:6px}
+.nexus-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:26px 0 16px}
+.nexus-actions button{min-height:42px;padding:9px 11px;border:1px solid #789ac36b;color:#cae2ff;background:#0f2845;font-size:9px;font-weight:800;letter-spacing:.065em}
+.nexus-actions button:first-child{grid-column:1/-1;background:linear-gradient(110deg,#6341a2,#4c3980);color:white;border-color:#a389f3}
+.nexus-actions button:hover{background:#28466b}
+.nexus-actions button:first-child:hover{background:#7955b4}
+.nexus-readout{display:flex;gap:12px;flex-wrap:wrap;justify-content:space-between;border-top:1px solid #628fca40;padding-top:15px;color:#7694b7;font-size:9px;letter-spacing:.055em}
+.nexus-readout span:first-child{color:#a3e4dc}
+.nexus-tech{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0}
+.nexus-tech>div{background:#0a172c;border:1px solid #5278b74e;padding:18px 19px}
+.nexus-tech strong{display:block;color:#c5b4ff;font-size:21px;font-weight:900}
+.nexus-tech span{display:block;color:#7899bd;margin-top:8px;letter-spacing:.11em;font-size:9px}
+/* Inferno game: science-fiction pilot dashboard with visible victory state */
+.inferno-brief{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:24px 0 12px;color:#d6ac97;font-size:9px;letter-spacing:.14em;font-weight:800}
+.inferno-brief span:first-child{color:#ffc196}
+.inferno-dashboard{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;border:1px solid #ba75576d;background:#653d3555;margin-bottom:0}
+.inferno-dashboard>div{padding:17px 19px;background:linear-gradient(120deg,#20192b,#111526);min-height:100px;display:flex;flex-direction:column;gap:7px}
+.inferno-dashboard small{color:#a5a7c0;font-size:9px;letter-spacing:.13em;font-weight:800}
+.inferno-dashboard strong{font-size:28px;font-weight:900;letter-spacing:-.035em;color:#e9f2ff}
+.inferno-dashboard .inferno-energy{color:#ffc27e}
+.inferno-dashboard .urgent{color:#ff756a;animation:infernoBlink .65s infinite alternate}
+@keyframes infernoBlink{to{opacity:.55}}
+.inferno-mini{color:#8794b0;font-size:9px;letter-spacing:.06em}
+.inferno-bar{height:5px;background:#372c38;overflow:hidden}
+.inferno-bar i{display:block;height:100%;background:linear-gradient(90deg,#fb723f,#ffd68e);box-shadow:0 0 12px #fe8a57;transition:width .14s linear}
+.inferno-bar.shield i{background:linear-gradient(90deg,#3a89d6,#9ae9ff);box-shadow:0 0 12px #85bffc}
+.inferno-arena{height:clamp(360px,43vw,530px);position:relative;overflow:hidden;background:#090e23;border:1px solid #955a5166;border-top:0;isolation:isolate}
+.inferno-arena canvas{display:block;width:100%;height:100%;touch-action:none;cursor:crosshair}
+.inferno-top-signal{position:absolute;top:17px;left:22px;right:22px;display:flex;justify-content:space-between;gap:20px;color:#bac6e5;font-size:9px;letter-spacing:.15em;font-weight:850;pointer-events:none;text-shadow:0 0 8px #020512}
+.inferno-top-signal span:first-child{color:#ffbc8c}
+.inferno-alert{pointer-events:none;position:absolute;top:66px;left:50%;transform:translateX(-50%);white-space:nowrap;color:#ffe5ab;font-size:12px;font-weight:900;letter-spacing:.13em;text-shadow:0 0 22px #ff8e4a;animation:infernoFlash .7s both}
+@keyframes infernoFlash{0%{opacity:0;transform:translate(-50%,8px)}25%{opacity:1;transform:translate(-50%,0)}100%{opacity:0}}
+.inferno-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;padding:28px;text-align:center;background:radial-gradient(ellipse at 50% 70%,#291c38db,#030a19e9 72%);z-index:4}
+.inferno-overlay.success{background:radial-gradient(ellipse at center,#133b448a,#041423e8 72%)}
+.inferno-overlay-icon{display:grid;place-items:center;border:1px solid #f3ac7f8c;color:#ffc894;border-radius:50%;width:70px;height:70px;font-size:35px;background:#fa864b16;box-shadow:0 0 55px #fa80492a}
+.inferno-overlay.success .inferno-overlay-icon{border-color:#80e5d0;color:#8bffe1;box-shadow:0 0 60px #49e9bd44;background:#50cfa016}
+.inferno-overlay>span{font-size:10px;color:#ffb997;letter-spacing:.23em;font-weight:850}
+.inferno-overlay.success>span{color:#99f4da}
+.inferno-overlay h3{font-size:clamp(24px,4vw,42px);line-height:1.1;color:#fff;letter-spacing:-.05em;margin:0}
+.inferno-overlay p{color:#b4c4de;font-size:12px;line-height:1.65;max-width:490px;margin:0}
+.inferno-start{background:linear-gradient(110deg,#ffae75,#f27c55);border:1px solid #fbcbaa;color:#160a10;padding:15px 26px;min-width:220px;font-size:11px;font-weight:900;letter-spacing:.12em;margin-top:13px;display:flex;justify-content:space-between;gap:30px;transition:filter .2s}
+.inferno-start:hover{filter:brightness(1.15)}
+.inferno-win-stats{display:flex;gap:15px;flex-wrap:wrap;justify-content:center;margin-top:6px}
+.inferno-win-stats span{font-size:9px;color:#80a5b8;letter-spacing:.1em}
+.inferno-win-stats b{display:block;color:#b7ffe9;font-size:20px;margin-top:6px}
+.inferno-control-row{display:flex;align-items:center;gap:22px;flex-wrap:wrap;border:1px solid #655c6870;border-top:0;background:#0e1829;padding:17px 20px}
+.inferno-mobile-pad{display:flex;gap:5px}
+.inferno-mobile-pad button{min-width:41px;min-height:39px;touch-action:none;border:1px solid #769ac278;background:#192c43;color:#e3efff;font-size:18px;user-select:none}
+.inferno-mobile-pad button:active{background:#33618c}
+.inferno-legend{display:flex;flex-direction:column;gap:4px;flex:1;min-width:175px}
+.inferno-legend strong{color:#cbd7ed;font-size:10px;letter-spacing:.12em}
+.inferno-legend span{color:#91a9c8;font-size:10px}
+.inferno-pulse-button{padding:13px 20px;background:#493151;border:1px solid #d18bba;color:#f7d6fb;font-weight:900;font-size:10px;letter-spacing:.09em;min-width:184px}
+.inferno-pulse-button small{display:block;font-size:8px;color:#d7b5d5;margin-top:5px}
+.inferno-pulse-button:disabled{opacity:.4;cursor:not-allowed}
+.inferno-footer-note{font-size:10px;color:#809cbb;line-height:1.65;margin-top:14px}
+@media(max-width:900px){.nexus-console{grid-template-columns:1fr}.nexus-visual,.nexus-visual canvas{min-height:360px}.nexus-controls{border-left:0;border-top:1px solid #618ac54a}.nexus-mode-tabs button{padding:15px}.inferno-dashboard strong{font-size:23px}}
+@media(max-width:640px){.nexus-mode-tabs{grid-template-columns:1fr;gap:6px}.nexus-mode-tabs button{min-height:0;padding:12px 14px}.nexus-mode-tabs button span{margin-bottom:3px}.nexus-console{min-height:0}.nexus-visual,.nexus-visual canvas{min-height:315px}.nexus-controls{padding:20px}.nexus-corner{font-size:8px}.nexus-topright span,.nexus-bottomleft span{display:none}.nexus-tech{grid-template-columns:1fr}.nexus-tech>div{padding:12px 15px}.inferno-dashboard{grid-template-columns:repeat(2,minmax(0,1fr))}.inferno-dashboard>div{min-height:88px;padding:12px}.inferno-dashboard strong{font-size:22px}.inferno-arena{height:390px}.inferno-top-signal{font-size:8px;left:10px;right:10px}.inferno-top-signal span:last-child{display:none}.inferno-control-row{gap:13px;padding:13px}.inferno-legend{width:100%;order:3}.inferno-pulse-button{min-width:0;flex:1}.inferno-mobile-pad button{min-width:34px}.inferno-overlay{padding:16px}.inferno-overlay h3{font-size:25px}}
+@media(prefers-reduced-motion:reduce){.inferno-dashboard .urgent,.inferno-alert{animation:none!important}}

@@ -33,6 +33,18 @@
       "static/chunks/_app-pages-browser_components_v10_RecruiterTour_tsx.js"
     ]
   },
+  "app\\page.tsx -> ../components/v11/InfernoMission": {
+    "id": "app\\page.tsx -> ../components/v11/InfernoMission",
+    "files": [
+      "static/chunks/_app-pages-browser_components_v11_InfernoMission_tsx.js"
+    ]
+  },
+  "app\\page.tsx -> ../components/v11/NexusLab": {
+    "id": "app\\page.tsx -> ../components/v11/NexusLab",
+    "files": [
+      "static/chunks/_app-pages-browser_components_v11_NexusLab_tsx.js"
+    ]
+  },
   "node_modules\\@react-three\\drei\\core\\VideoTexture.js -> hls.js": {
     "id": "node_modules\\@react-three\\drei\\core\\VideoTexture.js -> hls.js",
     "files": []
