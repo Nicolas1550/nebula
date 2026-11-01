@@ -66,8 +66,9 @@ export default function ProjectsArchive() {
             <summary>VER DETALLES TÉCNICOS <span aria-hidden="true">＋</span></summary>
             <div className="archive-details-body"><p>{project.description}</p><strong>STACK Y COMPETENCIAS</strong><div className="archive-tags">{project.technologies.map(tech => <span key={tech}>{tech}</span>)}</div></div>
           </details>
+          {project.demoNotice && <div className="project-demo-notice" role="note"><span className="project-demo-notice-label">◉ DEMOSTRACIÓN DISPONIBLE</span><p>{project.demoNotice}</p><a href={project.links.find(link => link.label === "VIDEO DEMO")?.href} target="_blank" rel="noopener noreferrer">▶ VER VIDEO DEMO ↗</a></div>}
           <div className="archive-links">
-            {project.links.map(link => <a href={link.href} key={link.href} rel="noopener noreferrer" target="_blank">{link.label} <span aria-hidden="true">↗</span></a>)}
+            {project.links.map(link => <a href={link.href} key={link.href} className={link.label === "VIDEO DEMO" ? "project-demo-link" : undefined} rel="noopener noreferrer" target="_blank">{link.label} <span aria-hidden="true">↗</span></a>)}
             {!project.links.length && <span>ENLACES NO PUBLICADOS</span>}
           </div>
         </div>

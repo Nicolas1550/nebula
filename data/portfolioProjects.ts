@@ -11,6 +11,7 @@ export type PortfolioProject = {
   image: string;
   links: { label: string; href: string }[];
   featured: boolean;
+  demoNotice?: string;
 };
 
 export const portfolioProjects: PortfolioProject[] = [
@@ -47,6 +48,7 @@ export const portfolioProjects: PortfolioProject[] = [
         "href": "https://www.linkedin.com/feed/update/urn:li:activity:7238672562367414273/"
       }
     ],
+    "demoNotice": "La versión pública funciona como presentación del proyecto. Los productos, servicios y funciones que dependen del backend pueden no estar disponibles porque mantener el servidor activo tiene un costo. Mirá la video demo para conocer el funcionamiento completo de la plataforma.",
     "featured": true
   },
   {
@@ -82,6 +84,7 @@ export const portfolioProjects: PortfolioProject[] = [
         "href": "https://www.linkedin.com/feed/update/urn:li:activity:7245273655893520386/"
       }
     ],
+    "demoNotice": "La versión pública funciona como presentación del proyecto. Los productos, servicios y funciones que dependen del backend pueden no estar disponibles porque mantener el servidor activo tiene un costo. Mirá la video demo para conocer el funcionamiento completo de la plataforma.",
     "featured": true
   },
   {
