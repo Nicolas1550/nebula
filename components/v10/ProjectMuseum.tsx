@@ -63,10 +63,10 @@ export default function ProjectMuseum({lowPower=false}:{lowPower?:boolean}){
   const three=useMemo(()=>[-1,0,1].map(delta=>portfolioProjects[(index+delta+portfolioProjects.length)%portfolioProjects.length]),[index]);
   const advance=(delta:number)=>setIndex(i=>(i+delta+portfolioProjects.length)%portfolioProjects.length);
   return <section className="museum" ref={host} aria-labelledby="museum-heading">
-    <div className="museum-heading"><div><span className="kicker">ORIGIN / HALL OF WORK / 014</span><h3 id="museum-heading">MUSEO DE <em>PROYECTOS.</em></h3><p>Una galería espacial interactiva con los 14 trabajos reales. Usá las flechas para recorrerlos.</p></div><span className="museum-badge">MÓDULO 3D · ACCESO LIBRE</span></div>
+    <div className="museum-heading"><div><span className="kicker">ORIGIN / HALL OF WORK / 017</span><h3 id="museum-heading">MUSEO DE <em>PROYECTOS.</em></h3><p>Una galería espacial interactiva con los 17 proyectos. Usá las flechas para recorrerlos.</p></div><span className="museum-badge">MÓDULO 3D · ACCESO LIBRE</span></div>
     <div className="museum-stage">
       {!lowPower&&visible?<MuseumCanvas projects={three} onPick={id=>setIndex(portfolioProjects.findIndex(p=>p.id===id))}/>:<div className="museum-static"><img src={'/portfolio/thumbs/'+project.id+'.webp'} alt={'Vista del proyecto '+project.title} loading="lazy"/><span>{lowPower?'VISTA LIGERA ACTIVADA':'GALERÍA DISPONIBLE AL DESPLAZARSE'}</span></div>}
-      <div className="museum-frame-label"><span>EXHIBIT / {String(index+1).padStart(2,'0')} OF 14</span><span>ORIGIN / HALL 01</span></div>
+      <div className="museum-frame-label"><span>EXHIBIT / {String(index+1).padStart(2,'0')} OF {portfolioProjects.length}</span><span>ORIGIN / HALL 01</span></div>
     </div>
     <div className="museum-console">
       <button type="button" onClick={()=>advance(-1)} className="museum-arrow" aria-label="Proyecto anterior">←</button>
