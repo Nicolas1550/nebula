@@ -367,3 +367,10 @@ a{color:inherit;text-decoration:none}button:focus-visible,a:focus-visible,input:
 @media(max-width:640px){.nexus-mode-tabs{grid-template-columns:1fr;gap:6px}.nexus-mode-tabs button{min-height:0;padding:12px 14px}.nexus-mode-tabs button span{margin-bottom:3px}.nexus-console{min-height:0}.nexus-visual,.nexus-visual canvas{min-height:315px}.nexus-controls{padding:20px}.nexus-corner{font-size:8px}.nexus-topright span,.nexus-bottomleft span{display:none}.nexus-tech{grid-template-columns:1fr}.nexus-tech>div{padding:12px 15px}.inferno-dashboard{grid-template-columns:repeat(2,minmax(0,1fr))}.inferno-dashboard>div{min-height:88px;padding:12px}.inferno-dashboard strong{font-size:22px}.inferno-arena{height:390px}.inferno-top-signal{font-size:8px;left:10px;right:10px}.inferno-top-signal span:last-child{display:none}.inferno-control-row{gap:13px;padding:13px}.inferno-legend{width:100%;order:3}.inferno-pulse-button{min-width:0;flex:1 1}.inferno-mobile-pad button{min-width:34px}.inferno-overlay{padding:16px}.inferno-overlay h3{font-size:25px}}
 @media(prefers-reduced-motion:reduce){.inferno-dashboard .urgent,.inferno-alert{animation:none!important}}
 
+/* Aviso de demos de proyectos con backend no alojado permanentemente */
+.project-demo-notice{margin:14px 0 12px;padding:14px 16px;border:1px solid rgba(112,205,255,.38);border-left:3px solid #7bd9ff;border-radius:9px;background:linear-gradient(120deg,rgba(23,77,111,.55),rgba(10,30,52,.72));color:#d5edff}
+.project-demo-notice-label{display:block;font-size:10px;font-weight:850;letter-spacing:.13em;color:#9de8ff}
+.project-demo-notice p{font-size:12px;line-height:1.65;margin:8px 0 10px;color:#c6d9e9}
+.project-demo-notice a,.archive-links a.project-demo-link,.museum-links a.project-demo-link{display:inline-flex;align-items:center;gap:6px;background:#b5ecff;color:#06223c;border:1px solid #d5f6ff;border-radius:5px;padding:10px 13px;font-size:10px;font-weight:900;letter-spacing:.055em;text-decoration:none}
+.project-demo-notice a:hover,.archive-links a.project-demo-link:hover,.museum-links a.project-demo-link:hover{background:#e1f9ff;color:#061a2b}
+

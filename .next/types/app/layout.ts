@@ -1,4 +1,4 @@
-// File: C:\Users\Nicolas Luciuk\OneDrive\Escritorio\nebula-beyond\app\layout.tsx
+// File: C:\Users\Nicolas Luciuk\OneDrive\Escritorio\trabajos\nebula-beyond\app\layout.tsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

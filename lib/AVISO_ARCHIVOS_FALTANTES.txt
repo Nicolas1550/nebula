@@ -1,0 +1,1 @@
+Este ZIP original no contiene la carpeta components/, aunque app/page.tsx la importa. Se actualizaron los 14 proyectos existentes con ATLAS, SYNAPSE y EON (17 total), pero para compilar hace falta recuperar la carpeta components/ del proyecto original. No se verifico npm run build.

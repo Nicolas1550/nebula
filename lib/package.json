@@ -1,0 +1,27 @@
+{
+  "name": "nebula-beyond",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "verify": "node scripts/verify-project.mjs && node scripts/verify-v10.mjs && node scripts/verify-v11.mjs",
+    "test:game": "node --experimental-strip-types tests/inferno-rules.test.mjs"
+  },
+  "dependencies": {
+    "next": "14.2.35",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "three": "^0.170.0",
+    "@react-three/fiber": "8.17.10",
+    "@react-three/drei": "^9.122.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2",
+    "@types/node": "^20.17.0",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@types/three": "^0.170.0"
+  }
+}

@@ -341,5 +341,65 @@ export const portfolioProjects: PortfolioProject[] = [
       }
     ],
     "featured": false
+  },
+  {
+    "id": "p15",
+    "title": "ATLAS",
+    "description": "Proyecto web ATLAS, disponible para explorar en su versión publicada.",
+    "summary": "Proyecto web ATLAS, disponible para explorar en su versión publicada.",
+    "category": "web",
+    "technologies": [],
+    "image": "atlas.svg",
+    "links": [
+      {
+        "label": "VER PROYECTO",
+        "href": "https://atlas-gamma-blue.vercel.app/"
+      },
+      {
+        "label": "GITHUB",
+        "href": "https://github.com/Nicolas1550/atlas"
+      }
+    ],
+    "featured": true
+  },
+  {
+    "id": "p16",
+    "title": "SYNAPSE",
+    "description": "Experiencia interactiva SYNAPSE con visualización neuronal 3D.",
+    "summary": "Experiencia interactiva SYNAPSE con visualización neuronal 3D.",
+    "category": "web",
+    "technologies": [],
+    "image": "synapse.svg",
+    "links": [
+      {
+        "label": "VER PROYECTO",
+        "href": "https://synapse-le8l.vercel.app/"
+      },
+      {
+        "label": "GITHUB",
+        "href": "https://github.com/Nicolas1550/synapse"
+      }
+    ],
+    "featured": true
+  },
+  {
+    "id": "p17",
+    "title": "EON — The Living City",
+    "description": "Simulación interactiva de una ciudad 3D con entornos y elementos urbanos.",
+    "summary": "Simulación interactiva de una ciudad 3D con entornos y elementos urbanos.",
+    "category": "web",
+    "technologies": [],
+    "image": "eon.svg",
+    "links": [
+      {
+        "label": "VER PROYECTO",
+        "href": "https://eon-three-henna.vercel.app/"
+      },
+      {
+        "label": "GITHUB",
+        "href": "https://github.com/Nicolas1550/eon"
+      }
+    ],
+    "featured": true
   }
 ];
