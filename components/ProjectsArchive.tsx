@@ -7,12 +7,14 @@ type Filter = 'all' | ProjectCategory;
 const filters: { key: Filter; label: string }[] = [
   { key: 'all', label: 'TODOS' },
   { key: 'fullstack', label: 'FULL STACK' },
+  { key: 'creative', label: 'EXPERIENCIAS 3D' },
   { key: 'product', label: 'PRODUCT ENGINEERING' },
   { key: 'leadership', label: 'LIDERAZGO / QA' },
   { key: 'web', label: 'WEB / UX' },
 ];
 const categoryLabels: Record<ProjectCategory, string> = {
   fullstack: 'FULL STACK',
+  creative: 'EXPERIENCIAS 3D',
   product: 'PRODUCT ENGINEERING',
   leadership: 'TECH LEAD · QA · PM',
   web: 'WEB · UX',
@@ -54,8 +56,8 @@ export default function ProjectsArchive() {
     </div>
     <div className="archive-grid">
       {shown.map((project, i) => <article className="archive-card" key={project.id}>
-        <div className="archive-image"><img src={`/portfolio/thumbs/${project.id}.webp`} alt={`Vista del proyecto ${project.title}`} loading="lazy" decoding="async" />
-          <span className="archive-image-index">MISSION / {project.id.slice(1)}</span>
+        <div className="archive-image"><a href={project.image} target="_blank" rel="noopener noreferrer" aria-label={`Ampliar imagen del proyecto ${project.title}`} title="Abrir imagen en tamaño completo"><img src={project.image} alt={`Vista del proyecto ${project.title}`} loading="lazy" decoding="async" /></a>
+          <span className="archive-image-index">MISSION / {project.id.slice(1)}</span><span className="archive-image-zoom" aria-hidden="true">AMPLIAR ↗</span>
           {project.featured && <span className="archive-featured">DESTACADO</span>}
         </div>
         <div className="archive-card-content">
@@ -77,6 +79,6 @@ export default function ProjectsArchive() {
     {filtered.length === 0 && <div className="archive-empty">No encontramos proyectos con esa búsqueda. <button onClick={() => {setQuery('');setFilter('all');setShowAll(false)}}>BORRAR FILTROS ↗</button></div>}
     {filter === 'all' && !search && !showAll && <button type="button" className="archive-show-all" onClick={() => setShowAll(true)}>EXPLORAR LOS {portfolioProjects.length} PROYECTOS <span>↓</span></button>}
     {filter === 'all' && !search && showAll && <button type="button" className="archive-show-all archive-collapse" onClick={() => setShowAll(false)}>MOSTRAR SOLO DESTACADOS ↑</button>}
-    <p className="archive-footnote">Los proyectos y descripciones provienen de mi portfolio original. Algunos repositorios privados no se muestran.</p>
+    <p className="archive-footnote">22 proyectos: experiencia profesional, desarrollo Full Stack y experimentos 3D. Algunas demos públicas pueden tener servicios limitados.</p>
   </section>;
 }

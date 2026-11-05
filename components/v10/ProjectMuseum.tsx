@@ -7,7 +7,7 @@ import {portfolioProjects, type PortfolioProject} from '../../data/portfolioProj
 
 const width=3.5;
 function Exhibit({project,slot,onPick}:{project:PortfolioProject;slot:number;onPick:()=>void}){
-  const tex=useTexture(`/portfolio/thumbs/${project.id}.webp`);
+  const tex=useTexture(project.image);
   useEffect(()=>{tex.colorSpace=THREE.SRGBColorSpace;tex.anisotropy=4;tex.needsUpdate=true},[tex]);
   const x=slot*3.9;
   return <group position={[x,1.75,slot===0?0:-1.2]} rotation={[0,-slot*.12,0]}>
@@ -63,9 +63,9 @@ export default function ProjectMuseum({lowPower=false}:{lowPower?:boolean}){
   const three=useMemo(()=>[-1,0,1].map(delta=>portfolioProjects[(index+delta+portfolioProjects.length)%portfolioProjects.length]),[index]);
   const advance=(delta:number)=>setIndex(i=>(i+delta+portfolioProjects.length)%portfolioProjects.length);
   return <section className="museum" ref={host} aria-labelledby="museum-heading">
-    <div className="museum-heading"><div><span className="kicker">ORIGIN / HALL OF WORK / 017</span><h3 id="museum-heading">MUSEO DE <em>PROYECTOS.</em></h3><p>Una galería espacial interactiva con los 17 proyectos. Usá las flechas para recorrerlos.</p></div><span className="museum-badge">MÓDULO 3D · ACCESO LIBRE</span></div>
+    <div className="museum-heading"><div><span className="kicker">ORIGIN / HALL OF WORK / {portfolioProjects.length.toString().padStart(3, '0')}</span><h3 id="museum-heading">MUSEO DE <em>PROYECTOS.</em></h3><p>Una galería espacial interactiva con los {portfolioProjects.length} proyectos. Usá las flechas para recorrerlos.</p></div><span className="museum-badge">MÓDULO 3D · ACCESO LIBRE</span></div>
     <div className="museum-stage">
-      {!lowPower&&visible?<MuseumCanvas projects={three} onPick={id=>setIndex(portfolioProjects.findIndex(p=>p.id===id))}/>:<div className="museum-static"><img src={'/portfolio/thumbs/'+project.id+'.webp'} alt={'Vista del proyecto '+project.title} loading="lazy"/><span>{lowPower?'VISTA LIGERA ACTIVADA':'GALERÍA DISPONIBLE AL DESPLAZARSE'}</span></div>}
+      {!lowPower&&visible?<MuseumCanvas projects={three} onPick={id=>setIndex(portfolioProjects.findIndex(p=>p.id===id))}/>:<div className="museum-static"><img src={project.image} alt={'Vista del proyecto '+project.title} loading="lazy"/><span>{lowPower?'VISTA LIGERA ACTIVADA':'GALERÍA DISPONIBLE AL DESPLAZARSE'}</span></div>}
       <div className="museum-frame-label"><span>EXHIBIT / {String(index+1).padStart(2,'0')} OF {portfolioProjects.length}</span><span>ORIGIN / HALL 01</span></div>
     </div>
     <div className="museum-console">

@@ -1,6 +1,8 @@
+> **NEBULA V12 / Archivo completo (22 proyectos):** incorporadas imágenes y enlaces de ATLAS, SYNAPSE, EON, NEBULA, SPEED, FRAME, SENTINEL y QUANTUM. Ver [ACTUALIZACION-22-PROYECTOS.md](./ACTUALIZACION-22-PROYECTOS.md).
+
 # NEBULA V11 — Nexus Research Lab + Inferno: Operation Ember
 
-Versión actualizada del portfolio espacial de Nicolás Luciuk, desarrollada **sobre el ZIP aportado**. Se conservan ORIGIN, los 14 proyectos, el museo 3D, NOVA, el aterrizaje, el recorrido de reclutadores, los planetas 2K y la introducción espacial.
+Versión actualizada del portfolio espacial de Nicolás Luciuk, desarrollada **sobre el ZIP aportado**. Se conservan ORIGIN, los 22 proyectos, el museo 3D, NOVA, el aterrizaje, el recorrido de reclutadores, los planetas 2K y la introducción espacial.
 
 ## Cómo probarlo en Windows
 
@@ -62,7 +64,7 @@ Las reglas puras se encuentran en `lib/infernoRules.ts`, con tests en `tests/inf
 - INFERNO apunta a ~30 FPS mientras se juega y ~10 FPS en pantallas de resultado.
 - NEXUS limita la cantidad de partículas a 320 y ofrece pausa manual.
 - Los módulos se importan dinámicamente, por lo que no cargan en la portada inicial.
-- Se conservaron los enlaces e imágenes originales de los 14 proyectos; no se añadieron datos profesionales inventados.
+- Se conservaron los enlaces de los 22 proyectos originales y se añadieron 8 fichas con portadas y enlaces confirmados.
 
 ## Archivos principales modificados
 

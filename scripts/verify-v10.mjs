@@ -13,7 +13,7 @@ for(const name of newParts){
 }
 const data=read('data/portfolioProjects.ts');
 const ids=[...data.matchAll(/"id": "(p\d\d)"/g)].map(m=>m[1]);
-assert.equal(ids.length,14,'Se esperan 14 proyectos');assert.equal(new Set(ids).size,14,'ID duplicado');
+assert.equal(ids.length,22,'Se esperan 22 proyectos');assert.equal(new Set(ids).size,22,'ID duplicado');
 for(const id of ids)exists(`public/portfolio/thumbs/${id}.webp`);
 const museum=read('components/v10/ProjectMuseum.tsx');
 const nova=read('components/v10/NovaAssistant.tsx');
@@ -27,6 +27,6 @@ assert.ok(home.includes('RECORRIDO RECLUTADOR'),'Falta botón recruiter');
 assert.ok(home.includes('NovaAssistant'),'Falta launcher NOVA');
 for(const name of ['ORIGIN','NEXUS','INFERNO'])assert.ok(home.includes(name));
 for(const name of ['public/social/nebula-v10-cover.jpg','public/portfolio/photo.webp'])exists(name);
-console.log('✓ Conservados 14 proyectos, imágenes y tres mundos');
+console.log('✓ Conservados 22 proyectos, imágenes y tres mundos');
 console.log('✓ Museo, NOVA, aterrizaje y recorrido conectados');
 console.log('Nota: verificación estructural; correr npm run build y probar WebGL en navegador.');

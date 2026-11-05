@@ -4,12 +4,12 @@ import {portfolioProjects} from '../../data/portfolioProjects';
 const highlights=portfolioProjects.filter(p=>p.featured).slice(0,3);
 const duration=5000;
 const slides=[
- {eyebrow:'00 / EXPEDITION BRIEF',title:'NO ES UN PORTFOLIO NORMAL.',subtitle:'Tres mundos, catorce proyectos y una experiencia interactiva construida con código real.',image:'/social/nebula-v8-cover.jpg'},
+ {eyebrow:'00 / EXPEDITION BRIEF',title:'NO ES UN PORTFOLIO NORMAL.',subtitle:`Tres mundos, ${portfolioProjects.length} proyectos y una experiencia interactiva construida con código real.`,image:'/social/nebula-v8-cover.jpg'},
  {eyebrow:'01 / THE DEVELOPER',title:'NICOLÁS LUCIUK',subtitle:'Full Stack Developer · Product Engineer · Desarrollo, producto y experiencia de usuario.',image:'/portfolio/photo.webp'},
- {eyebrow:'02 / ENGINEERING',title:'PROYECTOS QUE EXISTEN.',subtitle:'Aplicaciones web, e-commerce, QA y proyectos profesionales. Cada ficha incluye tecnologías y enlaces publicados.',image:'/portfolio/thumbs/'+(highlights[0]?.id??'p01')+'.webp'},
- {eyebrow:'03 / FEATURED WORK',title:'DEL DISEÑO AL PRODUCTO.',subtitle:'Trabajos seleccionados con un enfoque en rendimiento, funcionalidad, integraciones y calidad.',image:'/portfolio/thumbs/'+(highlights[1]?.id??'p02')+'.webp'},
- {eyebrow:'04 / TECH STACK',title:'TECNOLOGÍA APLICADA.',subtitle:'React, Next.js, TypeScript, APIs, bases de datos y automatización E2E. NEBULA suma WebGL y gráficos 3D.',image:'/portfolio/thumbs/'+(highlights[2]?.id??'p03')+'.webp'},
- {eyebrow:'05 / YOUR NEXT CONNECTION',title:'¿CONSTRUIMOS ALGO?',subtitle:'Explorá los 14 proyectos, probá los experimentos y descubrí el trabajo detrás de NEBULA.',image:'/social/origin-preview.webp'},
+ {eyebrow:'02 / ENGINEERING',title:'PROYECTOS QUE EXISTEN.',subtitle:'Aplicaciones web, e-commerce, QA y proyectos profesionales. Cada ficha incluye tecnologías y enlaces publicados.',image:highlights[0]?.image??'/social/nebula-v10-cover.jpg'},
+ {eyebrow:'03 / FEATURED WORK',title:'DEL DISEÑO AL PRODUCTO.',subtitle:'Trabajos seleccionados con un enfoque en rendimiento, funcionalidad, integraciones y calidad.',image:highlights[1]?.image??'/social/nebula-v10-cover.jpg'},
+ {eyebrow:'04 / TECH STACK',title:'TECNOLOGÍA APLICADA.',subtitle:'React, Next.js, TypeScript, APIs, bases de datos y automatización E2E. NEBULA suma WebGL y gráficos 3D.',image:highlights[2]?.image??'/social/nebula-v10-cover.jpg'},
+ {eyebrow:'05 / YOUR NEXT CONNECTION',title:'¿CONSTRUIMOS ALGO?',subtitle:`Explorá los ${portfolioProjects.length} proyectos, probá los experimentos y descubrí el trabajo detrás de NEBULA.`,image:'/social/origin-preview.webp'},
 ];
 export default function RecruiterTour({onClose,onExplore}:{onClose:()=>void;onExplore:()=>void}){
   const [step,setStep]=useState(0),[elapsed,setElapsed]=useState(0),[paused,setPaused]=useState(false),[finished,setFinished]=useState(false);
@@ -32,7 +32,7 @@ export default function RecruiterTour({onClose,onExplore}:{onClose:()=>void;onEx
     <div className="tour-backdrop" style={{backgroundImage:`linear-gradient(90deg,#030914ef 6%,#0309145a 100%),url('${current.image}')`}}/>
     <div className="tour-top"><div className="tour-brand">✧ NEBULA <span>/ RECRUITER MODE</span></div><div className="tour-tools"><span>{String(Math.ceil(Math.max(0,30000-elapsed)/1000)).padStart(2,'0')}s RESTANTES</span><button type="button" onClick={()=>setPaused(p=>!p)} aria-label={paused?'Reanudar recorrido':'Pausar recorrido'}>{paused?'REANUDAR ▶':'PAUSA ❚❚'}</button><button type="button" onClick={onClose}>CERRAR ×</button></div></div>
     <div className="tour-content" key={step}><span className="kicker">{current.eyebrow}</span><h2>{current.title}</h2><p>{current.subtitle}</p>
-      {step===2||step===3?<div className="tour-projects">{highlights.map(p=><a href={p.links[0]?.href??'#'} target="_blank" rel="noopener noreferrer" key={p.id}><img src={'/portfolio/thumbs/'+p.id+'.webp'} alt=""/><span>{p.title}<small>{p.technologies.slice(0,3).join(' · ')}</small></span>↗</a>)}</div>:null}
+      {step===2||step===3?<div className="tour-projects">{highlights.map(p=><a href={p.links[0]?.href??'#'} target="_blank" rel="noopener noreferrer" key={p.id}><img src={p.image} alt=""/><span>{p.title}<small>{p.technologies.slice(0,3).join(' · ')}</small></span>↗</a>)}</div>:null}
       {step===4&&<div className="tour-tech">{['React','Next.js','TypeScript','Node.js','Cypress','Three.js','MySQL'].map(t=><span key={t}>{t}</span>)}</div>}
       {step===5&&<div className="tour-call"><button type="button" onClick={onExplore}>EXPLORAR PORTFOLIO COMPLETO ↗</button><a href="https://portafolio-web-phi-five.vercel.app/" target="_blank" rel="noopener noreferrer">PORTFOLIO ORIGINAL ↗</a></div>}
     </div>

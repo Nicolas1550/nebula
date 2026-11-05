@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "verify": "node scripts/verify-project.mjs && node scripts/verify-v10.mjs && node scripts/verify-v11.mjs",
+    "verify": "node scripts/verify-project.mjs && node scripts/verify-v10.mjs && node scripts/verify-v11.mjs && node scripts/verify-portfolio.mjs",
     "test:game": "node --experimental-strip-types tests/inferno-rules.test.mjs"
   },
   "dependencies": {

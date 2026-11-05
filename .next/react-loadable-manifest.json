@@ -1,56 +1,56 @@
 {
   "app\\page.tsx -> ../components/OriginStation": {
-    "id": "app\\page.tsx -> ../components/OriginStation",
+    "id": 7822,
     "files": [
-      "static/chunks/_app-pages-browser_components_OriginStation_tsx.js"
+      "static/chunks/822.4c30cad063acf6f9.js"
     ]
   },
   "app\\page.tsx -> ../components/Universe": {
-    "id": "app\\page.tsx -> ../components/Universe",
+    "id": 9983,
     "files": []
   },
   "app\\page.tsx -> ../components/v10/NovaAssistant": {
-    "id": "app\\page.tsx -> ../components/v10/NovaAssistant",
+    "id": 5123,
     "files": [
-      "static/chunks/_app-pages-browser_components_v10_NovaAssistant_tsx.js"
+      "static/chunks/123.59aaa917ed50530c.js"
     ]
   },
   "app\\page.tsx -> ../components/v10/PlanetLanding": {
-    "id": "app\\page.tsx -> ../components/v10/PlanetLanding",
+    "id": 1066,
     "files": [
-      "static/chunks/_app-pages-browser_components_v10_PlanetLanding_tsx.js"
+      "static/chunks/66.caff4beea69b7fd9.js"
     ]
   },
   "app\\page.tsx -> ../components/v10/ProjectMuseum": {
-    "id": "app\\page.tsx -> ../components/v10/ProjectMuseum",
+    "id": 133,
     "files": [
-      "static/chunks/_app-pages-browser_components_v10_ProjectMuseum_tsx.js"
+      "static/chunks/133.f7182e3bac6745f7.js"
     ]
   },
   "app\\page.tsx -> ../components/v10/RecruiterTour": {
-    "id": "app\\page.tsx -> ../components/v10/RecruiterTour",
+    "id": 1327,
     "files": [
-      "static/chunks/_app-pages-browser_components_v10_RecruiterTour_tsx.js"
+      "static/chunks/327.868b6f2e9a4480ad.js"
     ]
   },
   "app\\page.tsx -> ../components/v11/InfernoMission": {
-    "id": "app\\page.tsx -> ../components/v11/InfernoMission",
+    "id": 2543,
     "files": [
-      "static/chunks/_app-pages-browser_components_v11_InfernoMission_tsx.js"
+      "static/chunks/543.42116c04299f68aa.js"
     ]
   },
   "app\\page.tsx -> ../components/v11/NexusLab": {
-    "id": "app\\page.tsx -> ../components/v11/NexusLab",
+    "id": 5154,
     "files": [
-      "static/chunks/_app-pages-browser_components_v11_NexusLab_tsx.js"
+      "static/chunks/154.26890be17adcdbc6.js"
     ]
   },
   "node_modules\\@react-three\\drei\\core\\VideoTexture.js -> hls.js": {
-    "id": "node_modules\\@react-three\\drei\\core\\VideoTexture.js -> hls.js",
+    "id": null,
     "files": []
   },
   "node_modules\\@react-three\\drei\\web\\FaceLandmarker.js -> @mediapipe/tasks-vision": {
-    "id": "node_modules\\@react-three\\drei\\web\\FaceLandmarker.js -> @mediapipe/tasks-vision",
+    "id": null,
     "files": []
   }
 }

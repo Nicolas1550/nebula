@@ -1,6 +1,6 @@
-// Catálogo extraído del archivo original portafolioWeb-main/src/app/components/projects/projects.tsx.
-// No se inventan proyectos ni enlaces; se omite un enlace GitHub de ejemplo del proyecto CEA.
-export type ProjectCategory = 'fullstack' | 'product' | 'leadership' | 'web';
+// Catálogo único de NEBULA V12: 22 trabajos. Los 14 originales y sus enlaces se conservaron.
+// Las portadas están en public/portfolio/thumbs y se usan en museo 3D, cards y NOVA.
+export type ProjectCategory = 'fullstack' | 'creative' | 'product' | 'leadership' | 'web';
 export type PortfolioProject = {
   id: string;
   title: string;
@@ -16,19 +16,77 @@ export type PortfolioProject = {
 
 export const portfolioProjects: PortfolioProject[] = [
   {
-    "id": "p15",
-    "title": "ATLAS",
-    "description": "Proyecto web ATLAS, disponible para explorar en su versión publicada.",
-    "summary": "Proyecto web ATLAS, disponible para explorar en su versión publicada.",
-    "category": "web",
+    "id": "p21",
+    "title": "SENTINEL",
+    "description": "Plataforma Full Stack de telemetría y monitoreo de seguridad. Permite registrar aplicaciones, emitir claves de integración y recibir eventos para mostrar actividad, incidentes y señales sospechosas. Incluye detección configurable de accesos fallidos y correlación de incidentes, con almacenamiento en PostgreSQL (Neon) e integración con ATLAS.",
+    "summary": "Monitoreo de eventos de seguridad, incidentes y aplicaciones conectadas",
+    "category": "fullstack",
     "technologies": [
-      "Web",
-      "Frontend"
+      "Next.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Neon",
+      "API Keys",
+      "Security Events"
     ],
-    "image": "atlas.svg",
+    "image": "/portfolio/thumbs/p21.webp",
     "links": [
       {
-        "label": "VER PROYECTO",
+        "label": "VER DEMO",
+        "href": "https://sentinel-sooty-two.vercel.app/"
+      },
+      {
+        "label": "GITHUB",
+        "href": "https://github.com/Nicolas1550/sentinel"
+      }
+    ],
+    "featured": true
+  },
+  {
+    "id": "p22",
+    "title": "QUANTUM — Trading Terminal",
+    "description": "Terminal financiera Full Stack para investigación y operaciones simuladas (paper trading). Incluye gráficos interactivos, indicadores técnicos, watchlists, búsqueda de activos, análisis de carteras y gestión de posiciones demo. Integra datos de proveedores externos según disponibilidad, autenticación y persistencia PostgreSQL (Neon). No ejecuta operaciones bursátiles reales.",
+    "summary": "Terminal de análisis de mercados con gráficos, indicadores y paper trading",
+    "category": "fullstack",
+    "technologies": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "PostgreSQL",
+      "Neon",
+      "Market APIs"
+    ],
+    "image": "/portfolio/thumbs/p22.webp",
+    "links": [
+      {
+        "label": "VER DEMO",
+        "href": "https://trading-indol-tau.vercel.app/"
+      },
+      {
+        "label": "GITHUB",
+        "href": "https://github.com/Nicolas1550/trading"
+      }
+    ],
+    "featured": true
+  },
+  {
+    "id": "p15",
+    "title": "ATLAS",
+    "description": "Plataforma Full Stack para explorar actividad sísmica mundial. Integra información de USGS, visualización geoespacial sobre un globo 3D y herramientas de consulta histórica. Incorpora autenticación, registros en PostgreSQL (Neon), alertas y una integración de eventos de seguridad con SENTINEL.",
+    "summary": "Inteligencia sísmica global con globo 3D, datos USGS y persistencia",
+    "category": "fullstack",
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "React",
+      "Three.js",
+      "PostgreSQL",
+      "USGS API"
+    ],
+    "image": "/portfolio/thumbs/p15.webp",
+    "links": [
+      {
+        "label": "VER DEMO",
         "href": "https://atlas-gamma-blue.vercel.app/"
       },
       {
@@ -39,21 +97,99 @@ export const portfolioProjects: PortfolioProject[] = [
     "featured": true
   },
   {
-    "id": "p16",
-    "title": "SYNAPSE",
-    "description": "Experiencia interactiva SYNAPSE con visualización neuronal 3D.",
-    "summary": "Experiencia interactiva SYNAPSE con visualización neuronal 3D.",
-    "category": "web",
+    "id": "p20",
+    "title": "FRAME Studio",
+    "description": "Editor audiovisual experimental de enfoque local-first, con edición multipista de video, texto y audio, transiciones, keyframes, subtítulos SRT, presets para redes, comentarios de revisión y proyectos guardados en IndexedDB. La demo pública en Vercel funciona como aplicación estática: la edición ocurre en el navegador, sin colaboración remota ni renderizado en servidor.",
+    "summary": "Editor audiovisual en navegador con timeline multipista, efectos y exportación",
+    "category": "fullstack",
+    "technologies": [
+      "JavaScript",
+      "Node.js",
+      "Canvas API",
+      "MediaRecorder",
+      "IndexedDB"
+    ],
+    "image": "/portfolio/thumbs/p20.webp",
+    "links": [
+      {
+        "label": "VER DEMO",
+        "href": "https://frame-sandy-nine.vercel.app/"
+      },
+      {
+        "label": "GITHUB",
+        "href": "https://github.com/Nicolas1550/frame"
+      }
+    ],
+    "featured": true
+  },
+  {
+    "id": "p18",
+    "title": "NEBULA",
+    "description": "Universo interactivo desarrollado con Next.js y Three.js. ORIGIN presenta proyectos mediante un museo espacial; NEXUS ofrece experimentos visuales de plasma, gravedad y ondas; INFERNO suma una experiencia jugable. La navegación incluye transiciones cinematográficas y un recorrido pensado para reclutadores.",
+    "summary": "Explorá tres mundos 3D con museo, laboratorio y juego interactivo",
+    "category": "creative",
     "technologies": [
       "Next.js",
       "React",
       "Three.js",
-      "React Three Fiber"
+      "React Three Fiber",
+      "WebGL"
     ],
-    "image": "synapse.svg",
+    "image": "/portfolio/thumbs/p18.webp",
     "links": [
       {
-        "label": "VER PROYECTO",
+        "label": "VER DEMO",
+        "href": "https://nebula-chi-two.vercel.app/"
+      },
+      {
+        "label": "GITHUB",
+        "href": "https://github.com/Nicolas1550/nebula"
+      }
+    ],
+    "featured": true
+  },
+  {
+    "id": "p17",
+    "title": "EON — The Living City",
+    "description": "Experiencia Full Stack de exploración urbana con Next.js, Three.js, vehículos, peatones, árboles y escenarios 3D. Incluye funcionalidades de autenticación y gestión de ciudades mediante APIs y persistencia PostgreSQL. Proyecto experimental centrado en combinar simulación visual y arquitectura web.",
+    "summary": "Una ciudad 3D viva con tráfico, vegetación y experiencias interactivas",
+    "category": "creative",
+    "technologies": [
+      "Next.js",
+      "React",
+      "Three.js",
+      "TypeScript",
+      "PostgreSQL"
+    ],
+    "image": "/portfolio/thumbs/p17.webp",
+    "links": [
+      {
+        "label": "VER DEMO",
+        "href": "https://eon-three-henna.vercel.app/"
+      },
+      {
+        "label": "GITHUB",
+        "href": "https://github.com/Nicolas1550/eon"
+      }
+    ],
+    "featured": true
+  },
+  {
+    "id": "p16",
+    "title": "SYNAPSE",
+    "description": "Experiencia interactiva con redes neuronales, nodos manipulables y animaciones 3D. Incluye demo pública y repositorio del proyecto.",
+    "summary": "Interfaz neuronal 3D interactiva con nodos y animaciones",
+    "category": "creative",
+    "technologies": [
+      "Next.js",
+      "React",
+      "Three.js",
+      "WebGL"
+    ],
+    "image": "/portfolio/thumbs/p16.webp",
+    "links": [
+      {
+        "label": "VER DEMO",
         "href": "https://synapse-le8l.vercel.app/"
       },
       {
@@ -64,26 +200,27 @@ export const portfolioProjects: PortfolioProject[] = [
     "featured": true
   },
   {
-    "id": "p17",
-    "title": "EON — The Living City",
-    "description": "Simulación interactiva de una ciudad 3D con entornos y elementos urbanos.",
-    "summary": "Simulación interactiva de una ciudad 3D con entornos y elementos urbanos.",
-    "category": "web",
+    "id": "p19",
+    "title": "SPEED Unlimited",
+    "description": "Concepto creativo independiente de una landing de bebida energética, con animaciones reactivas al desplazamiento, narrativa de producto, efectos de condensación y composición 2.5D/3D. Experimento visual no oficial, sin afiliación con la marca representada.",
+    "summary": "Landing de producto con narrativa visual, scroll y animaciones 3D",
+    "category": "creative",
     "technologies": [
       "Next.js",
       "React",
+      "GSAP",
       "Three.js",
-      "Simulación 3D"
+      "Animaciones"
     ],
-    "image": "eon.svg",
+    "image": "/portfolio/thumbs/p19.webp",
     "links": [
       {
-        "label": "VER PROYECTO",
-        "href": "https://eon-three-henna.vercel.app/"
+        "label": "VER DEMO",
+        "href": "https://speedv2-7rrl.vercel.app/"
       },
       {
         "label": "GITHUB",
-        "href": "https://github.com/Nicolas1550/eon"
+        "href": "https://github.com/Nicolas1550/speedv2"
       }
     ],
     "featured": true
@@ -102,7 +239,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "Tailwind CSS",
       "Mercado Pago"
     ],
-    "image": "peluqueria.webp",
+    "image": "/portfolio/thumbs/p01.webp",
     "links": [
       {
         "label": "VER PROYECTO",
@@ -138,7 +275,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "React",
       "Tailwind CSS"
     ],
-    "image": "makeup.webp",
+    "image": "/portfolio/thumbs/p02.webp",
     "links": [
       {
         "label": "VER PROYECTO",
@@ -171,7 +308,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "React/Aurelia (según módulo)",
       ".NET APIs"
     ],
-    "image": "chicksx.png",
+    "image": "/portfolio/thumbs/p03.webp",
     "links": [
       {
         "label": "VER PROYECTO",
@@ -192,7 +329,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "SEO/Performance",
       "Componentización"
     ],
-    "image": "chicksgold.png",
+    "image": "/portfolio/thumbs/p04.webp",
     "links": [
       {
         "label": "VER PROYECTO",
@@ -213,7 +350,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "QA",
       "Roadmap de producto"
     ],
-    "image": "tangoWeb.png",
+    "image": "/portfolio/thumbs/p05.webp",
     "links": [
       {
         "label": "VER PROYECTO",
@@ -234,7 +371,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "QA",
       "Coordinación técnica"
     ],
-    "image": "tangoFondo.png",
+    "image": "/portfolio/thumbs/p06.webp",
     "links": [
       {
         "label": "VER PROYECTO",
@@ -255,7 +392,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "Framer Motion",
       "Swiper.js"
     ],
-    "image": "bici.webp",
+    "image": "/portfolio/thumbs/p07.webp",
     "links": [
       {
         "label": "VER PROYECTO",
@@ -279,7 +416,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "Firebase",
       "Redux"
     ],
-    "image": "ciencia.webp",
+    "image": "/portfolio/thumbs/p08.webp",
     "links": [
       {
         "label": "VER PROYECTO",
@@ -300,7 +437,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "Optimización de contenido",
       "SEO"
     ],
-    "image": "fundamentals.png",
+    "image": "/portfolio/thumbs/p09.webp",
     "links": [
       {
         "label": "VER PROYECTO",
@@ -321,7 +458,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "Render prefetch",
       "SEO"
     ],
-    "image": "ceo-training.png",
+    "image": "/portfolio/thumbs/p10.webp",
     "links": [
       {
         "label": "VER PROYECTO",
@@ -342,7 +479,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "Accesibilidad",
       "Performance"
     ],
-    "image": "congreso.png",
+    "image": "/portfolio/thumbs/p11.webp",
     "links": [
       {
         "label": "VER PROYECTO",
@@ -363,7 +500,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "Arquitectura limpia",
       "Optimización de performance"
     ],
-    "image": "equilibrio.png",
+    "image": "/portfolio/thumbs/p12.webp",
     "links": [
       {
         "label": "VER PROYECTO",
@@ -385,7 +522,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "Mejora de performance",
       "Trabajo en equipo"
     ],
-    "image": "boticpartners.png",
+    "image": "/portfolio/thumbs/p13.webp",
     "links": [
       {
         "label": "VER PROYECTO",
@@ -406,7 +543,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "Copywriting",
       "UX"
     ],
-    "image": "capacitacionbursatil.png",
+    "image": "/portfolio/thumbs/p14.webp",
     "links": [
       {
         "label": "VER PROYECTO",

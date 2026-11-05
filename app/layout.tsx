@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'NEBULA — Beyond the Known | Portfolio de Nicolás Luciuk',
-  description: 'Explorá tres mundos interactivos: ORIGIN, NEXUS e INFERNO. Portfolio Full Stack con 14 proyectos reales, museo 3D, NOVA y tres mundos explorables.',
+  description: 'Explorá tres mundos interactivos: ORIGIN, NEXUS e INFERNO. Portfolio Full Stack con 22 proyectos, museo 3D, NOVA y tres mundos explorables.',
   openGraph: {
     title: 'NEBULA — Beyond the Known',
     description: 'Tres mundos. Una experiencia. Portfolio 3D interactivo de Nicolás Luciuk.',
